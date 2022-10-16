@@ -23,6 +23,7 @@ create_gp_dockerfile <- function(FROM, AS, rstudio){
   # if using a rstudio image open port 8787 and set password
   if(rstudio){
     dfile$EXPOSE(8787)
+    dfile$ENV("USER, "rstudio")
     dfile$ENV("PASSWORD", "123456")
   }
   # write file
