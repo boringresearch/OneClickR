@@ -6,5 +6,5 @@ RUN R -e 'remotes::install_cran("remotes")'
 RUN R -e 'remotes::install_cran("dockerfiler")'
 RUN R -e 'remotes::install_cran("devtools")'
 EXPOSE 8787
-ENV USER="rstudio"
+ENV "USER"="gitpod"
 ENV "PASSWORD"="123456"
