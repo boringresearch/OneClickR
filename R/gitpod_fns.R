@@ -43,7 +43,7 @@ create_gp_yml <- function(rstudio){
                  "  - port: 8787",
                  "    onOpen: open-preview",
                  "tasks:",
-                 "  - command: /usr/lib/rstudio-server/bin/rstudio-server start --server-user",
+                 "  - command: /usr/lib/rstudio-server/bin/rstudio-server start --server-user gitpod",
                  "vscode:",
                  "  extensions:",
                  "  - Ikuyadeu.r"),
