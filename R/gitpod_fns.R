@@ -23,7 +23,7 @@ create_gp_dockerfile <- function(FROM, AS, rstudio){
   # if using a rstudio image open port 8787 and set password
   if(rstudio){
     dfile$EXPOSE(8787)
-    dfile$ENV("PASSWORD", "password")
+    dfile$ENV("PASSWORD", "123456")
   }
   # write file
   dfile$write(as = ".gitpod.Dockerfile")
@@ -43,7 +43,7 @@ create_gp_yml <- function(rstudio){
                  "  - port: 8787",
                  "    onOpen: open-preview",
                  "tasks:",
-                 "  - command: /usr/lib/rstudio-server/bin/rstudio-server start --server-user gitpod",
+                 "  - command: sudo /usr/lib/rstudio-server/bin/rstudio-server start --server-user gitpod",
                  "vscode:",
                  "  extensions:",
                  "  - Ikuyadeu.r"),
