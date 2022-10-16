@@ -43,10 +43,10 @@ create_gp_yml <- function(rstudio){
                  "  - port: 8787",
                  "    onOpen: open-preview",
                  "tasks:",
-                 "  - command: /usr/lib/rstudio-server/bin/rstudio-server start",
+                 "  - command: /usr/lib/rstudio-server/bin/rstudio-server start --server-user",
                  "vscode:",
                  "  extensions:",
-                 "  - Ikuyadeu.r@1.2.1:z5vr1v1bfS++U/aHLSXQ6Q=="),
+                 "  - Ikuyadeu.r"),
                ".gitpod.yml")
   }else{
     # write yml without rstudio settings
@@ -54,7 +54,7 @@ create_gp_yml <- function(rstudio){
                  "  file: .gitpod.Dockerfile",
                  "vscode:",
                  "  extensions:",
-                 "  - Ikuyadeu.r@1.2.1:z5vr1v1bfS++U/aHLSXQ6Q=="),
+                 "  - Ikuyadeu.r"),
                ".gitpod.yml")
   }
 }
